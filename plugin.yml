@@ -1,0 +1,85 @@
+name: CheeseEssentials
+author: cheesepro
+version: 1
+description: LightWeighted Essentials System
+main: me.cheesepro.ce.mainpack.CEMain
+commands:
+  gmc:
+    description: Gamemode Creative
+    permission: CheeseEss.gmc
+    permission-message: §4§lYou don't have Permission!!
+  gms:
+    description: Gamemode Survival
+    permission: CheeseEss.gms
+    permission-message: §4§lYou don't have Permission!!
+  heal:
+    description: Heal yourself or others
+    permission: CheeseEss.heal
+    permission-message: §4§lYou don't have Permission!!
+  feed:
+    description: Feed yourself or others
+    permission: CheeseEss.feed
+    permission-message: §4§lYou don't have Permission!!
+  fly:
+    description: Enable/Disable flying ability
+    permission: CheeseEss.fly
+    permission-message: §4§lYou don't have Permission!!
+  speed:
+    description: Set flying/walking speed
+    permission: CheeseEss.speed
+    permission-message: §4§lYou don't have Permission!!
+  adminchat:
+    description: Enable/Disable Adminchat
+    permission: CheeseEss.adminchat
+    permission-message: §4§lYou don't have Permission!!
+  tp:
+    description: Teleport players
+    permission: CheeseEss.tp
+    permission-message: §4§lYou don't have Permission!!
+  tpall:
+    description: Teleport all players
+    permission: CheeseEss.tpall
+    permission-message: §4§lYou don't have Permission!!
+  back:
+    description: Teleport to your last location
+    permission: CheeseEss.back
+    permission-message: §4§lYou don't have Permission!!
+  logoutloc:
+      description: Teleport to your logout location
+      permission: CheeseEss.logoutloc
+      permission-message: §4§lYou don't have Permission!!
+  jump:
+      description: Teleport to your eye pointing location
+      permission: CheeseEss.jump
+      permission-message: §4§lYou don't have Permission!!
+  particles:
+      description: Cool particle effects
+      permission: CheeseEss.particles
+      permission-message: §4§lYou don't have Permission!!
+permissions:
+  CheeseEss.gmc:
+    default: op
+  CheeseEss.gms:
+    default: op
+  CheeseEss.heal:
+    default: op
+  CheeseEss.feed:
+    default: op
+  CheeseEss.fly:
+    default: op
+  CheeseEss.adminchat:
+    default: op
+  CheeseEss.tp:
+    default: op
+  CheeseEss.tpall:
+    default: op
+  CheeseEss.back:
+    default: true
+  CheeseEss.logoutloc:
+    default: true
+  CheeseEss.speed:
+    default: op
+  CheeseEss.jump:
+    default: op
+  CheeseEss.particles:
+    default: op

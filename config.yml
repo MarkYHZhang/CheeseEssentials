@@ -1,0 +1,17 @@
+motd:
+  game1: '&a&lWelcome to the server! Enjoy!'
+  game2: '&e&lHow you doing today? I dont know you but I am doing Great!'
+  game3: '&5&lUHamm I have nothing to day today.'
+  game4: '&4&lLVOE MEMEMEMEMEMEMEMEME'
+  game5: '&9player.sendMessage(ChatColor.RED.toString + ChatColor.Bold + "Ooops I forgot to convert");'
+  sys1: '&e&lServer is running CheeseEssentials!'
+  sys2: '&a&lHighly configurable'
+  sys3: '&c&lJoin now!'
+  sys4: '&d&lStill in BETA!'
+  sys5: '&f&lMOTD == Message of the Day!'
+prefix:
+  main: '&b&l>>'
+  warn: '&c&l>>'
+  tip: '&e&l>>'
+  gamemotd: '&5&l>>'
+  sysmotd: '&f&lMine&b&lFuture>/'
