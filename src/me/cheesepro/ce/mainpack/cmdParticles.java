@@ -35,8 +35,9 @@ public class cmdParticles implements CommandExecutor{
                     while(true){
                         if(option.equalsIgnoreCase("on")){
                             playEffect(p.getLocation().subtract(0, 1, 0), Effect.SMOKE, 5);
+                        }else{
+                            break;
                         }
-                        break;
                     }
                 }else{
 
