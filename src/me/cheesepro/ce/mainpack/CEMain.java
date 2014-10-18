@@ -36,7 +36,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdTP cmdTPInstance = new cmdTP(this);
         cmdSpeed cmdSpeedInstance = new cmdSpeed(this);
         cmdJump cmdJumpInstance = new cmdJump(this);
-        cmdParticles cmdParticlesInstance = new cmdParticles(this);
+        cmdHat cmdHatInstance = new cmdHat(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -61,7 +61,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("back").setExecutor(cmdTPInstance);
         getCommand("logoutloc").setExecutor(cmdTPInstance);
         getCommand("jump").setExecutor(cmdJumpInstance);
-        getCommand("particles").setExecutor(cmdParticlesInstance);
+        getCommand("hat").setExecutor(cmdHatInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
@@ -72,15 +72,15 @@ public class CEMain extends JavaPlugin implements Listener{
     }
 
 
-    public static void registerEvents(org.bukkit.plugin.Plugin plugin,
-                                      Listener... listeners) {
-        for (Listener listener : listeners) {
-            Bukkit.getServer().getPluginManager()
-                    .registerEvents(listener, plugin);
-        }
-
-
-    }
+//    public static void registerEvents(org.bukkit.plugin.Plugin plugin,
+//                                      Listener... listeners) {
+//        for (Listener listener : listeners) {
+//            Bukkit.getServer().getPluginManager()
+//                    .registerEvents(listener, plugin);
+//        }
+//
+//
+//    }
 
     public static Plugin getPlugin() {
         return plugin;

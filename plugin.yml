@@ -52,9 +52,9 @@ commands:
       description: Teleport to your eye pointing location
       permission: CheeseEss.jump
       permission-message: §4§lYou don't have Permission!!
-  particles:
-      description: Cool particle effects
-      permission: CheeseEss.particles
+  hat:
+      description: Get yourself a custom hat
+      permission: CheeseEss.hat
       permission-message: §4§lYou don't have Permission!!
 permissions:
   CheeseEss.gmc:
@@ -81,5 +81,5 @@ permissions:
     default: op
   CheeseEss.jump:
     default: op
-  CheeseEss.particles:
+  CheeseEss.hat:
     default: op
