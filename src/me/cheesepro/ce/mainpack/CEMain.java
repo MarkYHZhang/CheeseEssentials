@@ -37,6 +37,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdSpeed cmdSpeedInstance = new cmdSpeed(this);
         cmdJump cmdJumpInstance = new cmdJump(this);
         cmdHat cmdHatInstance = new cmdHat(this);
+        cmdInvsee cmdInvseeInstance = new cmdInvsee(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -62,6 +63,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("logoutloc").setExecutor(cmdTPInstance);
         getCommand("jump").setExecutor(cmdJumpInstance);
         getCommand("hat").setExecutor(cmdHatInstance);
+        getCommand("invsee").setExecutor(cmdInvseeInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

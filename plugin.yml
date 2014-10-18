@@ -56,6 +56,10 @@ commands:
       description: Get yourself a custom hat
       permission: CheeseEss.hat
       permission-message: §4§lYou don't have Permission!!
+  invsee:
+      description: Open other player's Inventory
+      permission: CheeseEss.invsee
+      permission-message: §4§lYou don't have Permission!!
 permissions:
   CheeseEss.gmc:
     default: op
@@ -83,3 +87,6 @@ permissions:
     default: op
   CheeseEss.hat:
     default: op
+  CheeseEss.invsee:
+    default: op
+
