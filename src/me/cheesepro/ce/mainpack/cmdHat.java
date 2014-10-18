@@ -32,7 +32,7 @@ public class cmdHat implements CommandExecutor{
                     p.getInventory().setHelmet(item);
                     p.getInventory().setItemInHand(air);
                     p.getInventory().remove(item);
-                    msg.m(p, "a", "Enjoy your new hat :D");
+                    msg.m(p, "a", "Enjoy your new hat");
                 }else if(p.getItemInHand().getType() == Material.AIR && p.getInventory().getHelmet()!=null) {
                     ItemStack air = new ItemStack(Material.AIR);
                     ItemStack item = new ItemStack(p.getInventory().getHelmet());
