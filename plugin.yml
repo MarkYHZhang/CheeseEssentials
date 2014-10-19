@@ -60,6 +60,18 @@ commands:
       description: Open other player's Inventory
       permission: CheeseEss.invsee
       permission-message: §4§lYou don't have Permission!!
+  tpa:
+      description: Send a teleport request
+      permission: CheeseEss.tpa
+      permission-message: §4§lYou don't have Permission!!
+  tpaccept:
+      description: Accept a teleport request
+      permission: CheeseEss.tpaccept
+      permission-message: §4§lYou don't have Permission!!
+  tpdeny:
+      description: ODeny a teleport request
+      permission: CheeseEss.tpdeny
+      permission-message: §4§lYou don't have Permission!!
 permissions:
   CheeseEss.gmc:
     default: op
@@ -89,4 +101,24 @@ permissions:
     default: op
   CheeseEss.invsee:
     default: op
+  CheeseEss.tpa:
+    default: true
+  CheeseEss.tpaccept:
+    default: true
+  CheeseEss.tpdeny:
+    default: true
+
+
+  CheeseEss.chat.player:
+    default: true
+  CheeseEss.chat.helper:
+    default: false
+  CheeseEss.chat.builder:
+    default: false
+  CheeseEss.chat.mod:
+    default: false
+  CheeseEss.chat.admin:
+    default: false
+  CheeseEss.chat.owner:
+    default: false
 

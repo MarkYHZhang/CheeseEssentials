@@ -38,6 +38,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdJump cmdJumpInstance = new cmdJump(this);
         cmdHat cmdHatInstance = new cmdHat(this);
         cmdInvsee cmdInvseeInstance = new cmdInvsee(this);
+        cmdTpa cmdTpaInstance = new cmdTpa(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -46,6 +47,7 @@ public class CEMain extends JavaPlugin implements Listener{
         new cmdOverride(this);
         new AdminChat(this);
         new Playerloc(this);
+        new chatFormatter(this);
 
         //End of Listeners Register
 
@@ -64,6 +66,9 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("jump").setExecutor(cmdJumpInstance);
         getCommand("hat").setExecutor(cmdHatInstance);
         getCommand("invsee").setExecutor(cmdInvseeInstance);
+        getCommand("tpa").setExecutor(cmdTpaInstance);
+        getCommand("tpaccept").setExecutor(cmdTpaInstance);
+        getCommand("tpdeny").setExecutor(cmdTpaInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

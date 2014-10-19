@@ -16,6 +16,7 @@ public class Messenger {
     ChatColor YELLOW = ChatColor.YELLOW;
     ChatColor GREEN = ChatColor.GREEN;
     ChatColor RED = ChatColor.RED;
+    ChatColor DRED = ChatColor.DARK_RED;
     ChatColor AQUA = ChatColor.AQUA;
     ChatColor LPURPLE = ChatColor.LIGHT_PURPLE;
     ChatColor DPURPLE = ChatColor.DARK_PURPLE;
@@ -79,13 +80,15 @@ public class Messenger {
         }else if(c.equalsIgnoreCase("a")){
             color = GREEN;
         }else if(c.equalsIgnoreCase("4")){
-            color = RED;
+            color = DRED;
         }else if(c.equalsIgnoreCase("b")){
             color = AQUA;
         }else if(c.equalsIgnoreCase("d")){
             color = LPURPLE;
         }else if(c.equalsIgnoreCase("5")){
             color = DPURPLE;
+        }else if(c.equalsIgnoreCase("c")){
+            color = RED;
         }
     }
 

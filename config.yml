@@ -1,14 +1,46 @@
+chat_format:
+  group_prefix:
+    player: ''
+    helper: '&1&lHelper'
+    builder: '&a&lBuilder'
+    mod: '&d&lMod'
+    admin: '&5&lAdmin'
+    owner: '&4&lOwner'
+  group_name_color:
+    player: '&7'
+    helper: '&a'
+    builder: '&2'
+    mod: '&3'
+    admin: '&c'
+    owner: '&e'
+  group_chat_color:
+    player: '&9'
+    helper: '&2'
+    builder: '&f'
+    mod: '&5'
+    admin: '&b'
+    owner: '&c&l'
+  group_chatsign:
+    player: '&f:'
+    helper: '&a>'
+    builder: '&a>'
+    mod: '&5&l>>'
+    admin: '&5&l>>'
+    owner: '&e&l>>'
 motd:
   game1: '&a&lWelcome to the server! Enjoy!'
   game2: '&e&lHow you doing today? I dont know you but I am doing Great!'
   game3: '&5&lUHamm I have nothing to day today.'
   game4: '&4&lLVOE MEMEMEMEMEMEMEMEME'
-  game5: '&9player.sendMessage(ChatColor.RED.toString + ChatColor.Bold + "Ooops I forgot to convert");'
+  game5: '&9player.sendMessage(ChatColor.RED.toString + ChatColor.Bold + "Ooops I forgot to compile..");'
   sys1: '&e&lServer is running CheeseEssentials!'
   sys2: '&a&lHighly configurable'
   sys3: '&c&lJoin now!'
   sys4: '&d&lStill in BETA!'
   sys5: '&f&lMOTD == Message of the Day!'
+messages:
+  join: 'Player %s Joined the game'
+  quit: 'Player %s Left the game'
 prefix:
   main: '&b&l>>'
   warn: '&c&l>>'
