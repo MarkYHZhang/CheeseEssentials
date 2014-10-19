@@ -69,8 +69,12 @@ commands:
       permission: CheeseEss.tpaccept
       permission-message: §4§lYou don't have Permission!!
   tpdeny:
-      description: ODeny a teleport request
+      description: Deny a teleport request
       permission: CheeseEss.tpdeny
+      permission-message: §4§lYou don't have Permission!!
+  sudo:
+      description: Force a player to preform a command or message
+      permission: super.sudo
       permission-message: §4§lYou don't have Permission!!
 permissions:
   CheeseEss.gmc:
@@ -120,5 +124,9 @@ permissions:
   CheeseEss.chat.admin:
     default: false
   CheeseEss.chat.owner:
+    default: false
+
+
+  super.sudo:
     default: false
 
