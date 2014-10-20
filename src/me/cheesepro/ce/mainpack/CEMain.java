@@ -40,6 +40,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdInvsee cmdInvseeInstance = new cmdInvsee(this);
         cmdTpa cmdTpaInstance = new cmdTpa(this);
         cmdSudo cmdSudoInstance = new cmdSudo(this);
+        cmdBarmsg cmdBarmsgInstance = new cmdBarmsg(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -71,6 +72,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("tpaccept").setExecutor(cmdTpaInstance);
         getCommand("tpdeny").setExecutor(cmdTpaInstance);
         getCommand("sudo").setExecutor(cmdSudoInstance);
+        getCommand("barmsg").setExecutor(cmdBarmsgInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

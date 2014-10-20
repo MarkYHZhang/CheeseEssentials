@@ -76,6 +76,10 @@ commands:
       description: Force a player to preform a command or message
       permission: super.sudo
       permission-message: §4§lYou don't have Permission!!
+  barmsg:
+      description: Sets the message of the boss bar
+      permission: CheeseEss.barmsg
+      permission-message: §4§lYou don't have Permission!!
 permissions:
   CheeseEss.gmc:
     default: op
@@ -111,6 +115,8 @@ permissions:
     default: true
   CheeseEss.tpdeny:
     default: true
+  CheeseEss.barmsg:
+    default: op
 
 
   CheeseEss.chat.player:
