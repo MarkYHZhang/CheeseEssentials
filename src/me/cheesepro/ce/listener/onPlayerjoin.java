@@ -35,6 +35,10 @@ public class onPlayerjoin implements Listener{
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
+        String pn = e.getPlayer().getName();
+        String joinmsg = plugin.getConfig().getString("messages.join").replaceAll("&", "§");
+        joinmsg = joinmsg.replaceAll("%name%", pn);
+        e.setJoinMessage(joinmsg);
         Random random = new Random();
         int r = random.nextInt(5 - 1 + 1) + 1;
         if(r==1) {

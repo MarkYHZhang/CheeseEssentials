@@ -24,7 +24,7 @@ public class chatFormatter implements Listener {
         this.msg = new Messenger(plugin);
     }
 
-    @EventHandler(priority= EventPriority.HIGH)
+    @EventHandler(priority = EventPriority.HIGH)
     public void onChat(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
         if(!(e.getFormat().equalsIgnoreCase("<" + "%s" + "> " + "%s"))) {

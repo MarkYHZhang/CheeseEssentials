@@ -45,11 +45,13 @@ public class CEMain extends JavaPlugin implements Listener{
 
         //Start of Listeners Register
         new onPlayerjoin(this);
+        new onPlayerquit(this);
         new onServerPing(this);
         new cmdOverride(this);
         new AdminChat(this);
         new Playerloc(this);
         new chatFormatter(this);
+        new onPlayerdeath(this);
 
         //End of Listeners Register
 
@@ -81,17 +83,6 @@ public class CEMain extends JavaPlugin implements Listener{
     public void onDisable() {
         getLogger().info("Plugin Disabled!");
     }
-
-
-//    public static void registerEvents(org.bukkit.plugin.Plugin plugin,
-//                                      Listener... listeners) {
-//        for (Listener listener : listeners) {
-//            Bukkit.getServer().getPluginManager()
-//                    .registerEvents(listener, plugin);
-//        }
-//
-//
-//    }
 
     public static Plugin getPlugin() {
         return plugin;

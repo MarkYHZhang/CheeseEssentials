@@ -39,8 +39,8 @@ motd:
   sys4: '&d&lStill in BETA!'
   sys5: '&f&lMOTD == Message of the Day!'
 messages:
-  join: 'Player %s Joined the game'
-  quit: 'Player %s Left the game'
+  join: '&a&l%name% &e&lJoined the game'
+  quit: '&e&l%name% &d&lLeft the game'
 prefix:
   main: '&b&l>>'
   warn: '&c&l>>'
