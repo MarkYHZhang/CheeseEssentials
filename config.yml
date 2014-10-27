@@ -41,9 +41,10 @@ motd:
 messages:
   join: '&a&l%name% &e&lJoined the game'
   quit: '&e&l%name% &d&lLeft the game'
+  bungee: ''
 prefix:
   main: '&b&l>>'
   warn: '&c&l>>'
   tip: '&e&l>>'
   gamemotd: '&5&l>>'
-  sysmotd: '&f&lMine&b&lFuture>/'
+  sysmotd: '&f&lMine&b&lFuture>'

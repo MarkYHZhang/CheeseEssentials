@@ -80,6 +80,11 @@ commands:
       description: Sets the message of the boss bar
       permission: CheeseEss.barmsg
       permission-message: §4§lYou don't have Permission!!
+  workbench:
+      description: Open your/other a workbench
+      permission: CheeseEss.workbench
+      permission-message: §4§lYou don't have Permission!!
+
 permissions:
   CheeseEss.gmc:
     default: op
@@ -117,7 +122,8 @@ permissions:
     default: true
   CheeseEss.barmsg:
     default: op
-
+  CheeseEss.workbench:
+    default: true
 
   CheeseEss.chat.player:
     default: true

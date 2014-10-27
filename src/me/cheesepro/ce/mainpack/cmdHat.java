@@ -29,8 +29,9 @@ public class cmdHat implements CommandExecutor{
                 if (!(p.getItemInHand().getType() == Material.AIR)) {
                     ItemStack air = new ItemStack(Material.AIR);
                     ItemStack item = new ItemStack(p.getItemInHand());
+                    ItemStack olditem = new ItemStack(p.getInventory().getHelmet());
                     p.getInventory().setHelmet(item);
-                    p.getInventory().setItemInHand(air);
+                    p.getInventory().setItemInHand(olditem);
                     p.getInventory().remove(item);
                     msg.m(p, "a", "Enjoy your new hat");
                 }else if(p.getItemInHand().getType() == Material.AIR && p.getInventory().getHelmet()!=null) {

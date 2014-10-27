@@ -28,6 +28,10 @@ public class cmdOverride implements Listener{
     @EventHandler
     public void onDisabledCMD(PlayerCommandPreprocessEvent e){
         Player p = e.getPlayer();
+        if (e.getMessage().toLowerCase().startsWith("/server")){
+            e.setCancelled(true);
+            Bukkit.broadcastMessage(ChatColor.GRAY.toString() + e.getPlayer().getName() + " Has connected to" + e.getMessage().replaceAll("/", " "));
+        }
         if(p.hasPermission("super.cmd.exists")) {
             msg.main(p, ChatColor.RED.toString() + ChatColor.BOLD + "Command Executed");
         }else{
@@ -35,10 +39,6 @@ public class cmdOverride implements Listener{
                 e.setCancelled(true);
                 msg.tip(p, "This server runs on a Custom Coded Plugin");
             } else if (e.getMessage().toLowerCase().startsWith("/help")) {
-//                for (HelpTopic topic : Bukkit.getServer().getHelpMap().getHelpTopics()) {
-//                    String trimmedTopic = topic.getName().startsWith("/") ? topic.getName().substring(1) : topic.getName();
-//                    msg.main(p, trimmedTopic);
-//                }
                 p.performCommand("help cheeseessentials");
                 e.setCancelled(true);
             } else if (e.getMessage().toLowerCase().startsWith("/ver") || e.getMessage().toLowerCase().startsWith("/version") || e.getMessage().toLowerCase().startsWith("/bungee")) {
