@@ -15,6 +15,7 @@ public class cmdHat implements CommandExecutor{
 
     private CEMain plugin;
     private final Messenger msg;
+    ItemStack olditem;
 
     public cmdHat(CEMain plugin){
         this.plugin = plugin;
@@ -29,7 +30,9 @@ public class cmdHat implements CommandExecutor{
                 if (!(p.getItemInHand().getType() == Material.AIR)) {
                     ItemStack air = new ItemStack(Material.AIR);
                     ItemStack item = new ItemStack(p.getItemInHand());
-                    ItemStack olditem = new ItemStack(p.getInventory().getHelmet());
+                    if(p.getInventory().getHelmet()!=null) {
+                        olditem = new ItemStack(p.getInventory().getHelmet());
+                    }
                     p.getInventory().setHelmet(item);
                     p.getInventory().setItemInHand(olditem);
                     p.getInventory().remove(item);

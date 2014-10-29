@@ -28,6 +28,12 @@ public class onPlayerdeath implements Listener{
 //        String pn = e.getEntity().getPlayer().getName();
 
         String m = e.getDeathMessage();
+        String pn = e.getEntity().getPlayer().getName();
+        if(m.equalsIgnoreCase("null")){
+            for(Player all: Bukkit.getOnlinePlayers()){
+                msg.w(all, "e", pn + " died");
+            }
+        }
         for(Player all: Bukkit.getOnlinePlayers()){
             msg.w(all, "e", m);
         }
