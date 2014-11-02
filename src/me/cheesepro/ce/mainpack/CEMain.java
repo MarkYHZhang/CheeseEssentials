@@ -42,6 +42,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdSudo cmdSudoInstance = new cmdSudo(this);
         cmdBarmsg cmdBarmsgInstance = new cmdBarmsg(this);
         cmdWorkbench cmdWorkbenchInstance = new cmdWorkbench(this);
+        cmdClear cmdClearInstance = new cmdClear(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -77,6 +78,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("sudo").setExecutor(cmdSudoInstance);
         getCommand("barmsg").setExecutor(cmdBarmsgInstance);
         getCommand("workbench").setExecutor(cmdWorkbenchInstance);
+        getCommand("clear").setExecutor(cmdClearInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
