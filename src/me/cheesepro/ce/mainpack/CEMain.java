@@ -61,6 +61,7 @@ public class CEMain extends JavaPlugin implements Listener{
         new Playerloc(this);
         new chatFormatter(this);
         new onPlayerdeath(this);
+        new warpSign(this);
 
         //End of Listeners Register
 
