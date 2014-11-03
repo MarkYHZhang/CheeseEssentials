@@ -88,6 +88,26 @@ commands:
       description: Clears inventory
       permission: CheeseEss.clear
       permission-message: §4§lYou don't have Permission!!
+  clear:
+      description: Clears inventory
+      permission: CheeseEss.clear
+      permission-message: §4§lYou don't have Permission!!
+  warplist:
+      description: Displays all the warps
+      permission: CheeseEss.warplist
+      permission-message: §4§lYou don't have Permission!!
+  warp:
+      description: Warp to a location
+      permission: CheeseEss.warp
+      permission-message: §4§lYou don't have Permission!!
+  setwarp:
+      description: Set a warp location
+      permission: CheeseEss.setwarp
+      permission-message: §4§lYou don't have Permission!!
+  delwarp:
+      description: Delete a warp location
+      permission: CheeseEss.delwarp
+      permission-message: §4§lYou don't have Permission!!
 
 permissions:
   CheeseEss.gmc:
@@ -131,6 +151,14 @@ permissions:
   CheeseEss.clear:
     default: true
   CheeseEss.clear.other:
+    default: op
+  CheeseEss.warplist:
+    default: true
+  CheeseEss.warp:
+    default: true
+  CheeseEss.setwarp:
+    default: op
+  CheeseEss.delwarp:
     default: op
 
   CheeseEss.chat.player:

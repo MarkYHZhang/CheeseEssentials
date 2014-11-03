@@ -24,6 +24,12 @@ public class CEMain extends JavaPlugin implements Listener{
             saveDefaultConfig();
         }
 
+        warploc wloc = warploc.getInstance();
+        wloc.setup(this);
+        if (!new File(getDataFolder(), "warploc.yml").exists()) {
+            saveDefaultConfig();
+        }
+
         getConfig().options().copyDefaults(true);
         saveConfig();
         //End of Files Configs
@@ -43,6 +49,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdBarmsg cmdBarmsgInstance = new cmdBarmsg(this);
         cmdWorkbench cmdWorkbenchInstance = new cmdWorkbench(this);
         cmdClear cmdClearInstance = new cmdClear(this);
+        cmdWarp cmdWarpInstance = new cmdWarp(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -79,6 +86,10 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("barmsg").setExecutor(cmdBarmsgInstance);
         getCommand("workbench").setExecutor(cmdWorkbenchInstance);
         getCommand("clear").setExecutor(cmdClearInstance);
+        getCommand("warplist").setExecutor(cmdWarpInstance);
+        getCommand("warp").setExecutor(cmdWarpInstance);
+        getCommand("setwarp").setExecutor(cmdWarpInstance);
+        getCommand("delwarp").setExecutor(cmdWarpInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
