@@ -108,6 +108,18 @@ commands:
       description: Delete a warp location
       permission: CheeseEss.delwarp
       permission-message: §4§lYou don't have Permission!!
+  spawn:
+      description: Teleport to spawn
+      permission: CheeseEss.spawn
+      permission-message: §4§lYou don't have Permission!!
+  setspawn:
+      description: Set the spawn location
+      permission: CheeseEss.setspawn
+      permission-message: §4§lYou don't have Permission!!
+  delspawn:
+      description: Delete the spawn location
+      permission: CheeseEss.delspawn
+      permission-message: §4§lYou don't have Permission!!
 
 permissions:
   CheeseEss.gmc:
@@ -160,7 +172,13 @@ permissions:
     default: op
   CheeseEss.delwarp:
     default: op
-
+  CheeseEss.spawn:
+    default: true
+  CheeseEss.setspawn:
+    default: op
+  CheeseEss.delspawn:
+    default: op
+    
   CheeseEss.chat.player:
     default: true
   CheeseEss.chat.helper:

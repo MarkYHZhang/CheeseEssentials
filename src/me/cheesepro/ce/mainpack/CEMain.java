@@ -4,7 +4,6 @@ import java.io.File;
 
 import me.cheesepro.ce.file.*;
 import me.cheesepro.ce.listener.*;
-import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.Plugin;
@@ -30,6 +29,12 @@ public class CEMain extends JavaPlugin implements Listener{
             saveDefaultConfig();
         }
 
+        spawnloc sloc = spawnloc.getInstance();
+        sloc.setup(this);
+        if (!new File(getDataFolder(), "spawnloc.yml").exists()) {
+            saveDefaultConfig();
+        }
+
         getConfig().options().copyDefaults(true);
         saveConfig();
         //End of Files Configs
@@ -50,6 +55,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdWorkbench cmdWorkbenchInstance = new cmdWorkbench(this);
         cmdClear cmdClearInstance = new cmdClear(this);
         cmdWarp cmdWarpInstance = new cmdWarp(this);
+        cmdSpawn cmdSpawnInstance = new cmdSpawn(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -62,6 +68,7 @@ public class CEMain extends JavaPlugin implements Listener{
         new chatFormatter(this);
         new onPlayerdeath(this);
         new warpSign(this);
+        new coloredSign(this);
 
         //End of Listeners Register
 
@@ -91,6 +98,9 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("warp").setExecutor(cmdWarpInstance);
         getCommand("setwarp").setExecutor(cmdWarpInstance);
         getCommand("delwarp").setExecutor(cmdWarpInstance);
+        getCommand("spawn").setExecutor(cmdSpawnInstance);
+        getCommand("setspawn").setExecutor(cmdSpawnInstance);
+        getCommand("delspawn").setExecutor(cmdSpawnInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
