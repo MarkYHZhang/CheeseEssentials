@@ -5,6 +5,7 @@ import me.cheesepro.ce.mainpack.CEMain;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
 
@@ -24,20 +25,20 @@ public class coloredSign implements Listener{
         this.msg = new Messenger(plugin);
     }
 
-    @EventHandler
+    @EventHandler (priority = EventPriority.HIGHEST)
     public void signChange(SignChangeEvent e) {
-        Player p = e.getPlayer();
         String[] lines = e.getLines();
         if(lines[0]!=null){
             e.setLine(0, lines[0].replaceAll("&", "§"));
-        }else if(lines[1]!=null){
-            e.setLine(1, lines[0].replaceAll("&", "§"));
-        }else if(lines[2]!=null){
-            e.setLine(2, lines[0].replaceAll("&", "§"));
-        }else if(lines[3]!=null){
-            e.setLine(3, lines[0].replaceAll("&", "§"));
-        }else{
-            e.setCancelled(true);
+        }
+        if(lines[1]!=null){
+            e.setLine(1, lines[1].replaceAll("&", "§"));
+        }
+        if (lines[2]!=null){
+            e.setLine(2, lines[2].replaceAll("&", "§"));
+        }
+        if (lines[3]!=null){
+            e.setLine(3, lines[3].replaceAll("&", "§"));
         }
     }
 

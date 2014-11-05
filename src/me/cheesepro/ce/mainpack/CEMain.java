@@ -56,6 +56,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdClear cmdClearInstance = new cmdClear(this);
         cmdWarp cmdWarpInstance = new cmdWarp(this);
         cmdSpawn cmdSpawnInstance = new cmdSpawn(this);
+        cmdSysinfo cmdSysinfoInstance = new cmdSysinfo(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -101,6 +102,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("spawn").setExecutor(cmdSpawnInstance);
         getCommand("setspawn").setExecutor(cmdSpawnInstance);
         getCommand("delspawn").setExecutor(cmdSpawnInstance);
+        getCommand("sysinfo").setExecutor(cmdSysinfoInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
