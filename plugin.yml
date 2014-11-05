@@ -140,7 +140,19 @@ commands:
       description: Delete a home location
       permission: CheeseEss.delhome
       permission-message: §4§lYou don't have Permission!!
-
+  hub:
+      description: Teleport to hub location
+      permission: CheeseEss.hub
+      permission-message: §4§lYou don't have Permission!!
+  sethub:
+      description: Set the hub location
+      permission: CheeseEss.sethub
+      permission-message: §4§lYou don't have Permission!!
+  delhub:
+      description: Delete the hub location
+      permission: CheeseEss.delhub
+      permission-message: §4§lYou don't have Permission!!
+      
 permissions:
   CheeseEss.gmc:
     default: op
@@ -208,6 +220,14 @@ permissions:
     default: true
   CheeseEss.delhome:
     default: true
+  CheeseEss.homemax.1:
+    default: true
+  CheeseEss.hub:
+    default: true
+  CheeseEss.sethub:
+    default: true
+  CheeseEss.delhub:
+    default: true 
     
   CheeseEss.chat.player:
     default: true

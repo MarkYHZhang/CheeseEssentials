@@ -41,6 +41,12 @@ public class CEMain extends JavaPlugin implements Listener{
             saveDefaultConfig();
         }
 
+        hubloc hbloc = hubloc.getInstance();
+        hbloc.setup(this);
+        if (!new File(getDataFolder(), "hubloc.yml").exists()) {
+            saveDefaultConfig();
+        }
+
 //        File dir = new File("plugins/CheeseEssentials/locations");
 //        dir.mkdir();
 
@@ -67,6 +73,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdSpawn cmdSpawnInstance = new cmdSpawn(this);
         cmdSysinfo cmdSysinfoInstance = new cmdSysinfo(this);
         cmdHome cmdHomeInstance = new cmdHome(this);
+        cmdHub cmdHubInstance = new cmdHub(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -117,6 +124,9 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("home").setExecutor(cmdHomeInstance);
         getCommand("sethome").setExecutor(cmdHomeInstance);
         getCommand("delhome").setExecutor(cmdHomeInstance);
+        getCommand("hub").setExecutor(cmdHubInstance);
+        getCommand("sethub").setExecutor(cmdHubInstance);
+        getCommand("delhub").setExecutor(cmdHubInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
