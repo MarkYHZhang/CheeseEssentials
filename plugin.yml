@@ -124,6 +124,22 @@ commands:
       description: Show System informations
       permission: CheeseEss.sysinfo
       permission-message: §4§lYou don't have Permission!!
+  homelist:
+      description: Displays all the homes
+      permission: CheeseEss.homelist
+      permission-message: §4§lYou don't have Permission!!
+  home:
+      description: Teleport to home location
+      permission: CheeseEss.home
+      permission-message: §4§lYou don't have Permission!!
+  sethome:
+      description: Set a home location
+      permission: CheeseEss.sethome
+      permission-message: §4§lYou don't have Permission!!
+  delhome:
+      description: Delete a home location
+      permission: CheeseEss.delhome
+      permission-message: §4§lYou don't have Permission!!
 
 permissions:
   CheeseEss.gmc:
@@ -184,6 +200,14 @@ permissions:
     default: op
   CheeseEss.sysinfo:
     default: op
+  CheeseEss.homelist:
+    default: true
+  CheeseEss.home:
+    default: true
+  CheeseEss.sethome:
+    default: true
+  CheeseEss.delhome:
+    default: true
     
   CheeseEss.chat.player:
     default: true

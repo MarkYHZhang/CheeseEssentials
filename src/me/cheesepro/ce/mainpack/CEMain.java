@@ -29,11 +29,20 @@ public class CEMain extends JavaPlugin implements Listener{
             saveDefaultConfig();
         }
 
+        homeloc hloc = homeloc.getInstance();
+        hloc.setup(this);
+        if (!new File(getDataFolder(), "homeloc.yml").exists()) {
+            saveDefaultConfig();
+        }
+
         spawnloc sloc = spawnloc.getInstance();
         sloc.setup(this);
         if (!new File(getDataFolder(), "spawnloc.yml").exists()) {
             saveDefaultConfig();
         }
+
+//        File dir = new File("plugins/CheeseEssentials/locations");
+//        dir.mkdir();
 
         getConfig().options().copyDefaults(true);
         saveConfig();
@@ -57,6 +66,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdWarp cmdWarpInstance = new cmdWarp(this);
         cmdSpawn cmdSpawnInstance = new cmdSpawn(this);
         cmdSysinfo cmdSysinfoInstance = new cmdSysinfo(this);
+        cmdHome cmdHomeInstance = new cmdHome(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -103,6 +113,10 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("setspawn").setExecutor(cmdSpawnInstance);
         getCommand("delspawn").setExecutor(cmdSpawnInstance);
         getCommand("sysinfo").setExecutor(cmdSysinfoInstance);
+        getCommand("homelist").setExecutor(cmdHomeInstance);
+        getCommand("home").setExecutor(cmdHomeInstance);
+        getCommand("sethome").setExecutor(cmdHomeInstance);
+        getCommand("delhome").setExecutor(cmdHomeInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
