@@ -10,6 +10,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.help.HelpTopic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Mark on 08/10/2014.
  */
@@ -39,7 +42,12 @@ public class cmdOverride implements Listener{
                 e.setCancelled(true);
                 msg.tip(p, "This server runs on a Custom Coded Plugin");
             } else if (e.getMessage().toLowerCase().startsWith("/help")) {
-                p.performCommand("help cheeseessentials");
+                List cmdlist = new ArrayList();
+                for (HelpTopic cmdLabel : Bukkit.getServer().getHelpMap().getHelpTopics()) {
+                    if (cmdLabel.canSee(p)){
+                        msg.m(p, "e", cmdLabel.getName() + " -" + cmdLabel.getShortText());
+                    }
+                }
                 e.setCancelled(true);
             } else if (e.getMessage().toLowerCase().startsWith("/ver") || e.getMessage().toLowerCase().startsWith("/version") || e.getMessage().toLowerCase().startsWith("/bungee")) {
                 e.setCancelled(true);
