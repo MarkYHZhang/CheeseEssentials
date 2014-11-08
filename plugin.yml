@@ -152,6 +152,14 @@ commands:
       description: Delete the hub location
       permission: CheeseEss.delhub
       permission-message: §4§lYou don't have Permission!!
+  slap:
+      description: Slap someone
+      permission: CheeseEss.slap
+      permission-message: §4§lYou don't have Permission!!
+  rocket:
+      description: Rocket someone
+      permission: CheeseEss.rocket
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -225,9 +233,13 @@ permissions:
   CheeseEss.hub:
     default: true
   CheeseEss.sethub:
-    default: true
+    default: op
   CheeseEss.delhub:
-    default: true 
+    default: op
+  CheeseEss.slap:
+    default: op
+  CheeseEss.rocket:
+    default: op
     
   CheeseEss.chat.player:
     default: true
@@ -241,7 +253,6 @@ permissions:
     default: false
   CheeseEss.chat.owner:
     default: false
-
 
   super.sudo:
     default: op

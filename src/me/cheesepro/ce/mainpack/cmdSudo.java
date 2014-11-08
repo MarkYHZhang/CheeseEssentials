@@ -52,6 +52,28 @@ public class cmdSudo implements CommandExecutor{
                                 msg.t(player, "b","cmd : send a command");
                                 msg.t(player, "b","msg : send a message");
                             }
+                        }else if(targetPlayer.toString().equalsIgnoreCase("all") && option!=null){
+                            if(option.equalsIgnoreCase("cmd")){
+                                for(int i=2;i<args.length;i++){
+                                    targetn=targetn+args[i] + " ";
+                                }
+                                msg.w(player, "5", "Target player " + targetPlayer.getName() + " preformed command [ /" + targetn +"]");
+                                for(Player all : Bukkit.getOnlinePlayers()){
+                                    all.performCommand(targetn);
+                                }
+                            }else if(option.equalsIgnoreCase("msg")){
+                                for(int i=2;i<args.length;i++){
+                                    targetn=targetn+args[i] + " ";
+                                }
+                                msg.w(player, "5", "Target player " + targetPlayer.getName() + " sent message [ " + targetn +"]");
+                                for(Player all : Bukkit.getOnlinePlayers()){
+                                    all.chat(targetn);
+                                }
+                            }else{
+                                msg.t(player, "b","options:");
+                                msg.t(player, "b","cmd : send a command");
+                                msg.t(player, "b","msg : send a message");
+                            }
                         }else{
                             msg.w(player, "5", "Player is not online");
                         }

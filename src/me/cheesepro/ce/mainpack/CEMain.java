@@ -74,6 +74,8 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdSysinfo cmdSysinfoInstance = new cmdSysinfo(this);
         cmdHome cmdHomeInstance = new cmdHome(this);
         cmdHub cmdHubInstance = new cmdHub(this);
+        cmdSlap cmdSlapInstance = new cmdSlap(this);
+        cmdRocket cmdRocketInstance = new cmdRocket(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -127,6 +129,8 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("hub").setExecutor(cmdHubInstance);
         getCommand("sethub").setExecutor(cmdHubInstance);
         getCommand("delhub").setExecutor(cmdHubInstance);
+        getCommand("slap").setExecutor(cmdSlapInstance);
+        getCommand("rocket").setExecutor(cmdRocketInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
