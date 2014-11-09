@@ -30,13 +30,17 @@ public class cmdgm implements CommandExecutor{
             Player p = (Player) sender;
             if(label.equalsIgnoreCase("gmc")){
                 if(args.length==1){
-                    Player target = p.getServer().getPlayer(args[0]);
-                    if(target!=null){
-                        target.setGameMode(GameMode.CREATIVE);
-                        msg.main(target, ChatColor.GREEN + "" + ChatColor.BOLD + "Your gamemode has been updated to Creative");
-                        msg.main(p, ChatColor.GREEN + "" + ChatColor.BOLD + "Player " + target.getName() + "'s gamemode has been updated to Creative");
+                    if(p.hasPermission("CheeseEss.gm.other")) {
+                        Player target = p.getServer().getPlayer(args[0]);
+                        if (target != null) {
+                            target.setGameMode(GameMode.CREATIVE);
+                            msg.main(target, ChatColor.GREEN + "" + ChatColor.BOLD + "Your gamemode has been updated to Creative");
+                            msg.main(p, ChatColor.GREEN + "" + ChatColor.BOLD + "Player " + target.getName() + "'s gamemode has been updated to Creative");
+                        } else {
+                            msg.warn(p, ChatColor.RED + "" + ChatColor.BOLD + "Player " + args[0] + " is not online");
+                        }
                     }else{
-                        msg.warn(p, ChatColor.RED + "" + ChatColor.BOLD + "Player " + args[0] + " is not online");
+                        msg.w(p, "4", "You don't have Permission!!");
                     }
                 }else{
                     p.setGameMode(GameMode.CREATIVE);
@@ -44,13 +48,17 @@ public class cmdgm implements CommandExecutor{
                 }
             }else if(label.equalsIgnoreCase("gms")){
                 if(args.length==1){
-                    Player target = p.getServer().getPlayer(args[0]);
-                    if(target!=null){
-                        target.setGameMode(GameMode.SURVIVAL);
-                        msg.main(target, ChatColor.GREEN + "" + ChatColor.BOLD + "Your gamemode has been updated to Survival");
-                        msg.main(p, ChatColor.GREEN + "" + ChatColor.BOLD + "Player " + target.getName() + "'s gamemode has been updated to Survival");
+                    if(p.hasPermission("CheeseEss.gm.other")) {
+                        Player target = p.getServer().getPlayer(args[0]);
+                        if (target != null) {
+                            target.setGameMode(GameMode.SURVIVAL);
+                            msg.main(target, ChatColor.GREEN + "" + ChatColor.BOLD + "Your gamemode has been updated to Survival");
+                            msg.main(p, ChatColor.GREEN + "" + ChatColor.BOLD + "Player " + target.getName() + "'s gamemode has been updated to Survival");
+                        } else {
+                            msg.warn(p, ChatColor.RED + "" + ChatColor.BOLD + "Player " + target.getName() + " is not online!");
+                        }
                     }else{
-                        msg.warn(p, ChatColor.RED + "" + ChatColor.BOLD + "Player " + target.getName() + " is not online!");
+                        msg.w(p, "4", "You don't have Permission!!");
                     }
                 }else{
                     p.setGameMode(GameMode.SURVIVAL);

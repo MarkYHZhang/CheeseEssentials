@@ -1,7 +1,7 @@
 name: CheeseEssentials
 author: cheesepro
 version: 1
-description: LightWeighted Essentials System
+description: Core plugin for MineFuture
 main: me.cheesepro.ce.mainpack.CEMain
 commands:
   gmc:
@@ -160,6 +160,26 @@ commands:
       description: Rocket someone
       permission: CheeseEss.rocket
       permission-message: §4§lYou don't have Permission!!
+  lightning:
+      description: Lightning strike someone
+      permission: CheeseEss.lightning
+      permission-message: §4§lYou don't have Permission!!
+  tell:
+      description: Send a private message to someone
+      permission: CheeseEss.tell
+      permission-message: §4§lYou don't have Permission!!
+  msg:
+      description: Send a private message to someone
+      permission: CheeseEss.tell
+      permission-message: §4§lYou don't have Permission!!
+  mute:
+      description: Mute a player
+      permission: CheeseEss.mute
+      permission-message: §4§lYou don't have Permission!!
+  unmute:
+      description: Unmute a player
+      permission: CheeseEss.unmute
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -199,7 +219,7 @@ permissions:
   CheeseEss.barmsg:
     default: op
   CheeseEss.workbench:
-    default: true
+    default: op
   CheeseEss.clear:
     default: true
   CheeseEss.clear.other:
@@ -240,19 +260,19 @@ permissions:
     default: op
   CheeseEss.rocket:
     default: op
-    
-  CheeseEss.chat.player:
+  CheeseEss.lightning:
+    default: op
+  CheeseEss.tell:
     default: true
-  CheeseEss.chat.helper:
-    default: false
-  CheeseEss.chat.builder:
-    default: false
-  CheeseEss.chat.mod:
-    default: false
-  CheeseEss.chat.admin:
-    default: false
-  CheeseEss.chat.owner:
-    default: false
+  CheeseEss.mute:
+    default: op
+  CheeseEss.unmute:
+    default: op
+
+  CheeseEss.fly.other:
+    default: op
+  CheeseEss.gm.other:
+    default: op
 
   super.sudo:
     default: op

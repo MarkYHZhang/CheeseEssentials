@@ -4,6 +4,7 @@ import java.io.File;
 
 import me.cheesepro.ce.file.*;
 import me.cheesepro.ce.listener.*;
+import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.Plugin;
@@ -76,6 +77,9 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdHub cmdHubInstance = new cmdHub(this);
         cmdSlap cmdSlapInstance = new cmdSlap(this);
         cmdRocket cmdRocketInstance = new cmdRocket(this);
+        cmdLightning cmdLightningInstance = new cmdLightning(this);
+        cmdTell cmdTellInstance = new cmdTell(this);
+        cmdMute cmdMuteInstance = new cmdMute(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -90,6 +94,7 @@ public class CEMain extends JavaPlugin implements Listener{
         new warpSign(this);
         new coloredSign(this);
 
+        registerEvents(this, cmdMuteInstance);
         //End of Listeners Register
 
         //Start of Command getters
@@ -131,9 +136,22 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("delhub").setExecutor(cmdHubInstance);
         getCommand("slap").setExecutor(cmdSlapInstance);
         getCommand("rocket").setExecutor(cmdRocketInstance);
+        getCommand("lightning").setExecutor(cmdLightningInstance);
+        getCommand("tell").setExecutor(cmdTellInstance);
+        getCommand("msg").setExecutor(cmdTellInstance);
+        getCommand("mute").setExecutor(cmdMuteInstance);
+        getCommand("unmute").setExecutor(cmdMuteInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
+    }
+
+    public static void registerEvents(org.bukkit.plugin.Plugin plugin,
+                                      Listener... listeners) {
+        for (Listener listener : listeners) {
+            Bukkit.getServer().getPluginManager()
+                    .registerEvents(listener, plugin);
+        }
     }
 
     public void onDisable() {

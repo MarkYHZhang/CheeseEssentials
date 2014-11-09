@@ -28,25 +28,30 @@ public class cmdFly implements CommandExecutor{
             Player p = (Player) sender;
             if (label.equalsIgnoreCase("fly")){
                 if(args.length==1){
-                    Player target = p.getServer().getPlayer(args[0]);
-                    if(target!=null){
-                        if(target.getGameMode() == GameMode.CREATIVE) {
-                            msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Target's GAMEMODE is Creative, execution ignored");
-                        }else{
-                            if (target.getAllowFlight() == true) {
-                                target.setAllowFlight(false);
-                                target.setFlying(false);
-                                msg.main(target, ChatColor.GREEN.toString() + ChatColor.BOLD + "You may not fly now");
-                                msg.main(p, ChatColor.GREEN.toString() + ChatColor.BOLD + "Target may not fly now");
+                    if(p.hasPermission("CheeseEss.fly.other")) {
+                        Player target = p.getServer().getPlayer(args[0]);
+                        if (target != null) {
+                            if (target.getGameMode() == GameMode.CREATIVE) {
+                                msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Target's GAMEMODE is Creative, execution ignored");
                             } else {
-                                target.setAllowFlight(true);
-                                target.setFlying(true);
-                                msg.main(target, ChatColor.GREEN.toString() + ChatColor.BOLD + "You may fly now");
-                                msg.main(p, ChatColor.GREEN.toString() + ChatColor.BOLD + "Target may fly now");
+                                if (target.getAllowFlight() == true) {
+                                    target.setAllowFlight(false);
+                                    target.setFlying(false);
+                                    msg.main(target, ChatColor.GREEN.toString() + ChatColor.BOLD + "You may not fly now");
+                                    msg.main(p, ChatColor.GREEN.toString() + ChatColor.BOLD + "Target may not fly now");
+                                } else {
+                                    target.setAllowFlight(true);
+                                    target.setFlying(true);
+                                    msg.main(target, ChatColor.GREEN.toString() + ChatColor.BOLD + "You may fly now");
+                                    msg.main(p, ChatColor.GREEN.toString() + ChatColor.BOLD + "Target may fly now");
+                                }
                             }
+                        } else {
+                            msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Target player is not online");
                         }
                     }else{
-                        msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Target player is not online");
+                        msg.w(p, "4", "You don't have Permission!!");
+                        return false;
                     }
                 }else{
                     if(p.getGameMode() == GameMode.CREATIVE) {

@@ -28,14 +28,12 @@ public class cmdRocket implements CommandExecutor{
                 if(args.length==1){
                     Player target = p.getServer().getPlayer(args[0]);
                     if(target!=null){
-                        Vector v = target.getVelocity();
-                        target.setVelocity(v.setZ(20));
+                        target.setVelocity(new Vector(0, 10, 0));
                         msg.m(p, "5", "Rocketed " + target.getName());
                         msg.m(target, "e", "You are rocketed");
                     }else if(args[0].equalsIgnoreCase("all")){
                         for(Player all : Bukkit.getServer().getOnlinePlayers()){
-                            Vector v = all.getVelocity();
-                            all.setVelocity(v.setZ(20));
+                            all.setVelocity(new Vector(0, 10, 0));
                             msg.m(all, "e", "You are rocketed!");
                         }
                         msg.m(p, "5", "rocketed everyone!");
