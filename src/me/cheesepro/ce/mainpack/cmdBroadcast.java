@@ -23,7 +23,7 @@ public class cmdBroadcast implements CommandExecutor{
 
 
     public boolean onCommand(CommandSender sender, Command cmd, String label,String[] args) {
-        Player player = (Player) sender;
+        Player p = (Player) sender;
         if(sender instanceof Player){
             if(label.equalsIgnoreCase("broadcast")){
                 String usrcmdinput="";
@@ -31,10 +31,9 @@ public class cmdBroadcast implements CommandExecutor{
                     usrcmdinput = usrcmdinput + args[i] + " ";
                 }
                 if(args.length>0){
-                    player.sendMessage(ChatColor.GRAY + "Message [ " +usrcmdinput +"] sent!");
-                    Bukkit.broadcastMessage(ChatColor.YELLOW + "[!]" + ChatColor.RESET + ChatColor.RED + "" + ChatColor.BOLD + "Broadcast" + ChatColor.RESET + ChatColor.YELLOW + "[!] " + usrcmdinput);
+                    Bukkit.broadcastMessage(ChatColor.YELLOW.toString() + ChatColor.BOLD + "[!]" + ChatColor.RESET + ChatColor.RED + "" + ChatColor.BOLD + "Broadcast" + ChatColor.RESET + ChatColor.YELLOW.toString() + ChatColor.BOLD + "[!] " + usrcmdinput);
                 }else if(args.length==0){
-                    player.sendMessage(ChatColor.YELLOW + "/broadcast [Message]");
+                    msg.t(p, "e", "/broadcast [Message]");
                 }
             }
         }else{

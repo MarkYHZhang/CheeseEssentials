@@ -80,6 +80,11 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdLightning cmdLightningInstance = new cmdLightning(this);
         cmdTell cmdTellInstance = new cmdTell(this);
         cmdMute cmdMuteInstance = new cmdMute(this);
+        cmdKill cmdKillInstance = new cmdKill(this);
+        cmdSpam cmdSpamInstance = new cmdSpam(this);
+        cmdBroadcast cmdBroadcastInstance = new cmdBroadcast(this);
+        cmdCchat cmdCchatInstance = new cmdCchat(this);
+        cmdVanish cmdVanishInstance = new cmdVanish(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -93,6 +98,7 @@ public class CEMain extends JavaPlugin implements Listener{
         new onPlayerdeath(this);
         new warpSign(this);
         new coloredSign(this);
+        new onPlayerRespawn(this);
 
         registerEvents(this, cmdMuteInstance);
         //End of Listeners Register
@@ -141,6 +147,11 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("msg").setExecutor(cmdTellInstance);
         getCommand("mute").setExecutor(cmdMuteInstance);
         getCommand("unmute").setExecutor(cmdMuteInstance);
+        getCommand("kill").setExecutor(cmdKillInstance);
+        getCommand("spam").setExecutor(cmdSpamInstance);
+        getCommand("broadcast").setExecutor(cmdBroadcastInstance);
+        getCommand("cchat").setExecutor(cmdCchatInstance);
+        getCommand("vanish").setExecutor(cmdVanishInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

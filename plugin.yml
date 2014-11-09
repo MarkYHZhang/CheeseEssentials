@@ -180,6 +180,26 @@ commands:
       description: Unmute a player
       permission: CheeseEss.unmute
       permission-message: §4§lYou don't have Permission!!
+  kill:
+      description: Kill a player
+      permission: CheeseEss.kill
+      permission-message: §4§lYou don't have Permission!!
+  spam:
+      description: Spam the chat
+      permission: CheeseEss.spam
+      permission-message: §4§lYou don't have Permission!!
+  broadcast:
+      description: Broadcast a message
+      permission: CheeseEss.broadcast
+      permission-message: §4§lYou don't have Permission!!
+  cchat:
+      description: Clears the chat
+      permission: CheeseEss.cchat
+      permission-message: §4§lYou don't have Permission!!
+  vanish:
+      description: Vanish yourself
+      permission: CheeseEss.vanish
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -267,6 +287,22 @@ permissions:
   CheeseEss.mute:
     default: op
   CheeseEss.unmute:
+    default: op
+  CheeseEss.kill:
+    default: op
+  CheeseEss.spam:
+    default: op
+  CheeseEss.broadcast:
+    default: op
+  CheeseEss.cchat:
+    default: op
+  CheeseEss.vanish:
+    default: op
+  CheeseEss.vanish.complete:
+    default: op
+
+
+  CheeseEss.chat.color:
     default: op
 
   CheeseEss.fly.other:

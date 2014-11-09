@@ -48,7 +48,7 @@ public class chatFormatter implements Listener {
     @EventHandler (priority = EventPriority.HIGHEST)
     public void colorcoding(AsyncPlayerChatEvent e){
         Player p = e.getPlayer();
-        if(p.hasPermission("CheeseEss.chat.color")){
+        if(p.hasPermission("cheeseess.chat.color")){
             String msg = e.getMessage().replaceAll("&", "§");
             e.setMessage(msg);
         }
