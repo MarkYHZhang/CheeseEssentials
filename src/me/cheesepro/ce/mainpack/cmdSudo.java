@@ -52,12 +52,12 @@ public class cmdSudo implements CommandExecutor{
                                 msg.t(player, "b","cmd : send a command");
                                 msg.t(player, "b","msg : send a message");
                             }
-                        }else if(targetPlayer.toString().equalsIgnoreCase("all") && option!=null){
+                        }else if(args[1].equalsIgnoreCase("all") && option!=null){
                             if(option.equalsIgnoreCase("cmd")){
                                 for(int i=2;i<args.length;i++){
                                     targetn=targetn+args[i] + " ";
                                 }
-                                msg.w(player, "5", "Target player " + targetPlayer.getName() + " preformed command [ /" + targetn +"]");
+                                msg.w(player, "5", "Target player " + args[1] + " preformed command [ /" + targetn +"]");
                                 for(Player all : Bukkit.getOnlinePlayers()){
                                     all.performCommand(targetn);
                                 }
@@ -65,7 +65,7 @@ public class cmdSudo implements CommandExecutor{
                                 for(int i=2;i<args.length;i++){
                                     targetn=targetn+args[i] + " ";
                                 }
-                                msg.w(player, "5", "Target player " + targetPlayer.getName() + " sent message [ " + targetn +"]");
+                                msg.w(player, "5", "Target player " + args[0] + " sent message [ " + targetn +"]");
                                 for(Player all : Bukkit.getOnlinePlayers()){
                                     all.chat(targetn);
                                 }

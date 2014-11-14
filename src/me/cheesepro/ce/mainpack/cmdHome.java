@@ -84,11 +84,26 @@ public class cmdHome implements CommandExecutor{
                         try {
                               homeCount = Integer.parseInt(numberOnly);
                                 List homenum = new ArrayList();
-                                for(String homes : settings.getData().getConfigurationSection("homes." + id).getKeys(false)){
-                                    homenum.add(homes);
-                                }
-                                int has = homenum.size()+1;
-                                if(has<=homeCount){
+                                if(settings.getData().getString("homes." + id)!=null) {
+                                    for (String homes : settings.getData().getConfigurationSection("homes." + id).getKeys(false)) {
+                                        homenum.add(homes);
+                                    }
+                                    int has = homenum.size() + 1;
+                                    if (has <= homeCount) {
+                                        settings.getData().set("homes." + id + "." + args[0] + ".world", p.getLocation().getWorld().getName());
+                                        settings.getData().set("homes." + id + "." + args[0] + ".pitch", p.getLocation().getPitch());
+                                        settings.getData().set("homes." + id + "." + args[0] + ".yaw", p.getLocation().getYaw());
+                                        settings.getData().set("homes." + id + "." + args[0] + ".x", p.getLocation().getX());
+                                        settings.getData().set("homes." + id + "." + args[0] + ".y", p.getLocation().getY());
+                                        settings.getData().set("homes." + id + "." + args[0] + ".z", p.getLocation().getZ());
+                                        settings.saveData();
+                                        msg.m(p, "a", "Set home " + args[0] + "!");
+                                        return true;
+                                    } else {
+                                        msg.w(p, "4", "Reached maximum home limit");
+                                        return true;
+                                    }
+                                }else{
                                     settings.getData().set("homes." + id + "." + args[0] + ".world", p.getLocation().getWorld().getName());
                                     settings.getData().set("homes." + id + "." + args[0] + ".pitch", p.getLocation().getPitch());
                                     settings.getData().set("homes." + id + "." + args[0] + ".yaw", p.getLocation().getYaw());
@@ -97,10 +112,7 @@ public class cmdHome implements CommandExecutor{
                                     settings.getData().set("homes." + id + "." + args[0] + ".z", p.getLocation().getZ());
                                     settings.saveData();
                                     msg.m(p, "a", "Set home " + args[0] + "!");
-                                    return true;
-                                }else{
-                                    msg.w(p, "4", "Reached maximum home limit");
-                                    return true;
+                                    return false;
                                 }
                         } catch (NumberFormatException ex) {
                             ConsoleSender.msgConsole("CheeseEss.home.int != CheeseEss.home.string");

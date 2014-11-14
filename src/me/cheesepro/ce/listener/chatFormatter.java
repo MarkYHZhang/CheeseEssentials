@@ -17,8 +17,6 @@ public class chatFormatter implements Listener {
 
     CEMain plugin;
     private final Messenger msg;
-
-
     public chatFormatter(CEMain main) {
         main.getServer().getPluginManager().registerEvents(this, main);
         this.plugin = main;

@@ -200,6 +200,22 @@ commands:
       description: Vanish yourself
       permission: CheeseEss.vanish
       permission-message: §4§lYou don't have Permission!!
+  day:
+      description: Set time to day
+      permission: CheeseEss.day
+      permission-message: §4§lYou don't have Permission!!
+  night:
+      description: Set time to night
+      permission: CheeseEss.night
+      permission-message: §4§lYou don't have Permission!!
+  suicide:
+      description: Kill your self
+      permission: CheeseEss.suicide
+      permission-message: §4§lYou don't have Permission!!
+  claim:
+      description: Protect your build
+      permission: CheeseEss.claim
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -300,6 +316,14 @@ permissions:
     default: op
   CheeseEss.vanish.complete:
     default: op
+  CheeseEss.day:
+    default: op
+  CheeseEss.night:
+    default: op
+  CheeseEss.suicide:
+    default: true
+  CheeseEss.claim:
+    default: true
 
 
   CheeseEss.chat.color:

@@ -85,6 +85,9 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdBroadcast cmdBroadcastInstance = new cmdBroadcast(this);
         cmdCchat cmdCchatInstance = new cmdCchat(this);
         cmdVanish cmdVanishInstance = new cmdVanish(this);
+        cmdTime cmdTimeInstance = new cmdTime(this);
+        cmdSuicide cmdSuicideInstance = new cmdSuicide(this);
+        cmdClaim cmdClaimInstance = new cmdClaim(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -152,6 +155,10 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("broadcast").setExecutor(cmdBroadcastInstance);
         getCommand("cchat").setExecutor(cmdCchatInstance);
         getCommand("vanish").setExecutor(cmdVanishInstance);
+        getCommand("day").setExecutor(cmdTimeInstance);
+        getCommand("night").setExecutor(cmdTimeInstance);
+        getCommand("suicide").setExecutor(cmdSuicideInstance);
+        getCommand("claim").setExecutor(cmdClaimInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

@@ -23,8 +23,8 @@ public class cmdBroadcast implements CommandExecutor{
 
 
     public boolean onCommand(CommandSender sender, Command cmd, String label,String[] args) {
-        Player p = (Player) sender;
         if(sender instanceof Player){
+            Player p = (Player) sender;
             if(label.equalsIgnoreCase("broadcast")){
                 String usrcmdinput="";
                 for(int i=0;i<args.length;i++){
