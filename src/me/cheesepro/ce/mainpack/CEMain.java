@@ -67,7 +67,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdInvsee cmdInvseeInstance = new cmdInvsee(this);
         cmdTpa cmdTpaInstance = new cmdTpa(this);
         cmdSudo cmdSudoInstance = new cmdSudo(this);
-        cmdBarmsg cmdBarmsgInstance = new cmdBarmsg(this);
+//        cmdBarmsg cmdBarmsgInstance = new cmdBarmsg(this);
         cmdWorkbench cmdWorkbenchInstance = new cmdWorkbench(this);
         cmdClear cmdClearInstance = new cmdClear(this);
         cmdWarp cmdWarpInstance = new cmdWarp(this);
@@ -88,6 +88,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdTime cmdTimeInstance = new cmdTime(this);
         cmdSuicide cmdSuicideInstance = new cmdSuicide(this);
         cmdClaim cmdClaimInstance = new cmdClaim(this);
+        cmdSeen cmdSeenInstance = new cmdSeen(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -125,7 +126,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("tpaccept").setExecutor(cmdTpaInstance);
         getCommand("tpdeny").setExecutor(cmdTpaInstance);
         getCommand("sudo").setExecutor(cmdSudoInstance);
-        getCommand("barmsg").setExecutor(cmdBarmsgInstance);
+//        getCommand("barmsg").setExecutor(cmdBarmsgInstance);
         getCommand("workbench").setExecutor(cmdWorkbenchInstance);
         getCommand("clear").setExecutor(cmdClearInstance);
         getCommand("warplist").setExecutor(cmdWarpInstance);
@@ -159,6 +160,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("night").setExecutor(cmdTimeInstance);
         getCommand("suicide").setExecutor(cmdSuicideInstance);
         getCommand("claim").setExecutor(cmdClaimInstance);
+        getCommand("seen").setExecutor(cmdSeenInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

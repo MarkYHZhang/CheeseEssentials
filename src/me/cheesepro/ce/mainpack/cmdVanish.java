@@ -40,7 +40,11 @@ public class cmdVanish implements CommandExecutor{
                         msg.m(p, "e", "Vanished");
                     }
                 }else{
+                    for(Player all : Bukkit.getOnlinePlayers()){
+                        all.showPlayer(p);
+                    }
                     p.removePotionEffect(PotionEffectType.INVISIBILITY);
+                    msg.m(p, "e", "Once again visible");
                 }
             }
         }else{

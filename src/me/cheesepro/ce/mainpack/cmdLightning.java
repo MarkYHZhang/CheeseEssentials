@@ -30,7 +30,7 @@ public class cmdLightning implements CommandExecutor{
                 }else if(args.length==1) {
                     Player targetPlayer = sender.getServer().getPlayer(args[0]);
                     if (targetPlayer != null) {
-                        targetPlayer.getWorld().strikeLightning(targetPlayer.getLocation());
+                        targetPlayer.getWorld().strikeLightningEffect(targetPlayer.getLocation());
                         msg.w(targetPlayer, "a", "Lightning Striked by " + sender.getName());
                         msg.m(((Player) sender).getPlayer(), "5", "Player " + targetPlayer.getName() + " successfully Smited!");
 
@@ -46,7 +46,7 @@ public class cmdLightning implements CommandExecutor{
                 }else if(args.length==1){
                     Player targetPlayer = Bukkit.getServer().getPlayer(args[0]);
                     if(targetPlayer!=null) {
-                        targetPlayer.getWorld().strikeLightning(targetPlayer.getLocation());
+                        targetPlayer.getWorld().strikeLightningEffect(targetPlayer.getLocation());
                         msg.w(targetPlayer, "a", "Lightning Striked by Console");
                         Bukkit.getLogger().info("Player " + targetPlayer.getName() + " successfully Smited!");
                     }else{

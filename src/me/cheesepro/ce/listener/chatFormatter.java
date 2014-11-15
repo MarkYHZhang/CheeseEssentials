@@ -23,13 +23,13 @@ public class chatFormatter implements Listener {
         this.msg = new Messenger(plugin);
     }
 
-    @EventHandler(priority = EventPriority.HIGH)
+    @EventHandler
     public void onChat(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
         if(!(e.getFormat().equalsIgnoreCase("<" + "%s" + "> " + "%s"))) {
             for (PermissionAttachmentInfo perm : p.getEffectivePermissions()) {
                 if (perm.getPermission().startsWith("cheeseess.chat.")) {
-                    String rank = perm.getPermission().replaceAll("cheeseess.chat.", "");
+                    String rank = perm.getPermission().replaceAll("cheeseess.chat.", "").trim();
                     String rankprefix = plugin.getConfig().getString("chat_format.group_prefix." + rank).replaceAll("&", "§");
                     String rankname = plugin.getConfig().getString("chat_format.group_name_color." + rank).replaceAll("&", "§");
                     String rankchat = plugin.getConfig().getString("chat_format.group_chat_color." + rank).replaceAll("&", "§");
@@ -43,7 +43,7 @@ public class chatFormatter implements Listener {
 
     }
 
-    @EventHandler (priority = EventPriority.HIGHEST)
+    @EventHandler
     public void colorcoding(AsyncPlayerChatEvent e){
         Player p = e.getPlayer();
         if(p.hasPermission("cheeseess.chat.color")){

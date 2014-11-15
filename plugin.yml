@@ -76,10 +76,10 @@ commands:
       description: Force a player to preform a command or message
       permission: super.sudo
       permission-message: §4§lYou don't have Permission!!
-  barmsg:
-      description: Sets the message of the boss bar
-      permission: CheeseEss.barmsg
-      permission-message: §4§lYou don't have Permission!!
+#  barmsg:
+#      description: Sets the message of the boss bar
+#      permission: CheeseEss.barmsg
+#      permission-message: §4§lYou don't have Permission!!
   workbench:
       description: Open your/other a workbench
       permission: CheeseEss.workbench
@@ -216,6 +216,10 @@ commands:
       description: Protect your build
       permission: CheeseEss.claim
       permission-message: §4§lYou don't have Permission!!
+  seen:
+      description: Offline Player info
+      permission: CheeseEss.seen
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -252,8 +256,8 @@ permissions:
     default: true
   CheeseEss.tpdeny:
     default: true
-  CheeseEss.barmsg:
-    default: op
+#  CheeseEss.barmsg:
+#    default: op
   CheeseEss.workbench:
     default: op
   CheeseEss.clear:
@@ -324,6 +328,8 @@ permissions:
     default: true
   CheeseEss.claim:
     default: true
+  CheeseEss.seen:
+    default: op
 
 
   CheeseEss.chat.color:
