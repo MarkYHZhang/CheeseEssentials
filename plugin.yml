@@ -220,6 +220,10 @@ commands:
       description: Offline Player info
       permission: CheeseEss.seen
       permission-message: §4§lYou don't have Permission!!
+  weather:
+      description: Change weathers
+      permission: CheeseEss.weather
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -330,6 +334,8 @@ permissions:
     default: true
   CheeseEss.seen:
     default: op
+  CheeseEss.weather:
+    default: op
 
 
   CheeseEss.chat.color:
@@ -338,6 +344,8 @@ permissions:
   CheeseEss.fly.other:
     default: op
   CheeseEss.gm.other:
+    default: op
+  CheeseEss.tp.other:
     default: op
 
   super.sudo:

@@ -89,6 +89,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdSuicide cmdSuicideInstance = new cmdSuicide(this);
         cmdClaim cmdClaimInstance = new cmdClaim(this);
         cmdSeen cmdSeenInstance = new cmdSeen(this);
+        cmdWeather cmdWeatherInstance = new cmdWeather(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -161,6 +162,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("suicide").setExecutor(cmdSuicideInstance);
         getCommand("claim").setExecutor(cmdClaimInstance);
         getCommand("seen").setExecutor(cmdSeenInstance);
+        getCommand("weather").setExecutor(cmdWeatherInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

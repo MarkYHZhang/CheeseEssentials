@@ -41,14 +41,16 @@ public class cmdTP implements CommandExecutor{
                         msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Invalid target Player");
                     }
                 }else if(args.length==2){
-                    Player target1 = p.getServer().getPlayer(args[0]);
-                    Player target2 = p.getServer().getPlayer(args[1]);
-                    if(target1!=null && target2!=null){
-                        target1.teleport(target2);
-                        msg.main(p, ChatColor.BLUE.toString() + ChatColor.BOLD + "Teleported " + target1.getName() + " to " + target2.getName());
-                        msg.main(target1, ChatColor.BLUE.toString() + ChatColor.BOLD + "Teleported to " + target2.getName());
-                    }else{
-                        msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Invalid target Players");
+                    if(p.hasPermission("CheeseEss.tp.other")) {
+                        Player target1 = p.getServer().getPlayer(args[0]);
+                        Player target2 = p.getServer().getPlayer(args[1]);
+                        if (target1 != null && target2 != null) {
+                            target1.teleport(target2);
+                            msg.main(p, ChatColor.BLUE.toString() + ChatColor.BOLD + "Teleported " + target1.getName() + " to " + target2.getName());
+                            msg.main(target1, ChatColor.BLUE.toString() + ChatColor.BOLD + "Teleported to " + target2.getName());
+                        } else {
+                            msg.warn(p, ChatColor.RED.toString() + ChatColor.BOLD + "Invalid target Players");
+                        }
                     }
                 }else{
                     msg.tip(p, ChatColor.GOLD.toString() + ChatColor.BOLD + "/tp [target]");
