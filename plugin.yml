@@ -236,6 +236,10 @@ commands:
       description: List all the players
       permission: CheeseEss.list
       permission-message: §4§lYou don't have Permission!!
+  top:
+      description: Teleport to the top
+      permission: CheeseEss.top
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -354,7 +358,8 @@ permissions:
     default: true
   CheeseEss.list:
     default: true
-
+  CheeseEss.top:
+    default: true
 
   CheeseEss.chat.color:
     default: op
