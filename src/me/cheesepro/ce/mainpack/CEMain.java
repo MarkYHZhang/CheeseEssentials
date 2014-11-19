@@ -90,6 +90,9 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdClaim cmdClaimInstance = new cmdClaim(this);
         cmdSeen cmdSeenInstance = new cmdSeen(this);
         cmdWeather cmdWeatherInstance = new cmdWeather(this);
+        cmdID cmdIDInstance = new cmdID(this);
+        cmdGetpos cmdGetposInstance = new cmdGetpos(this);
+        cmdList cmdListInstance = new cmdList(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -163,6 +166,9 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("claim").setExecutor(cmdClaimInstance);
         getCommand("seen").setExecutor(cmdSeenInstance);
         getCommand("weather").setExecutor(cmdWeatherInstance);
+        getCommand("id").setExecutor(cmdIDInstance);
+        getCommand("getpos").setExecutor(cmdGetposInstance);
+        getCommand("list").setExecutor(cmdListInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

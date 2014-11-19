@@ -224,6 +224,18 @@ commands:
       description: Change weathers
       permission: CheeseEss.weather
       permission-message: §4§lYou don't have Permission!!
+  id:
+      description: Get your ID card
+      permission: CheeseEss.id
+      permission-message: §4§lYou don't have Permission!!
+  getpos:
+      description: Get the coordinates of your current location
+      permission: CheeseEss.getpos
+      permission-message: §4§lYou don't have Permission!!
+  list:
+      description: List all the players
+      permission: CheeseEss.list
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -336,6 +348,12 @@ permissions:
     default: op
   CheeseEss.weather:
     default: op
+  CheeseEss.id:
+    default: true
+  CheeseEss.getpos:
+    default: true
+  CheeseEss.list:
+    default: true
 
 
   CheeseEss.chat.color:

@@ -28,11 +28,11 @@ public class cmdWeather implements CommandExecutor{
             World w = p.getWorld();
             if(cmd.getLabel().equalsIgnoreCase("weather")){
                 if(args.length==1) {
-                    if (args[0].equalsIgnoreCase("sun")) {
+                    if (args[0].equalsIgnoreCase("clear")) {
                         w.setStorm(false);
                         w.setThundering(false);
                         w.setThunderDuration(0);
-                        msg.m(p, "a", "Set weather to sun");
+                        msg.m(p, "a", "Set weather to clear");
                     } else if (args[0].equalsIgnoreCase("storm")) {
                         w.setStorm(true);
                         msg.m(p, "a", "Set weather to storm");
@@ -40,10 +40,10 @@ public class cmdWeather implements CommandExecutor{
                         w.setThundering(true);
                         msg.m(p, "a", "Set weather to rain");
                     } else {
-                        msg.t(p, "e", "/weather [sun/storm/rain]");
+                        msg.t(p, "e", "/weather [clear/storm/rain]");
                     }
                 }else{
-                    msg.t(p, "e", "/weather [sun/storm/rain]");
+                    msg.t(p, "e", "/weather [clear/storm/rain]");
                 }
             }
         }else{
