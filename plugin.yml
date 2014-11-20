@@ -240,6 +240,10 @@ commands:
       description: Teleport to the top
       permission: CheeseEss.top
       permission-message: §4§lYou don't have Permission!!
+  head:
+      description: Get your or other's head
+      permission: CheeseEss.head
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -359,7 +363,9 @@ permissions:
   CheeseEss.list:
     default: true
   CheeseEss.top:
-    default: true
+    default: op
+  CheeseEss.head:
+    default: op
 
   CheeseEss.chat.color:
     default: op

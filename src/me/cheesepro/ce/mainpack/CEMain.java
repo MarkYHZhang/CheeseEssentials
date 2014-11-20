@@ -94,6 +94,7 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdGetpos cmdGetposInstance = new cmdGetpos(this);
         cmdList cmdListInstance = new cmdList(this);
         cmdTop cmdTopInstace = new cmdTop(this);
+        cmdHead cmdHeadInstance = new cmdHead(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -171,6 +172,7 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("getpos").setExecutor(cmdGetposInstance);
         getCommand("list").setExecutor(cmdListInstance);
         getCommand("top").setExecutor(cmdTopInstace);
+        getCommand("head").setExecutor(cmdHeadInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");
