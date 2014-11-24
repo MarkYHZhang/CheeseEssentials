@@ -4,7 +4,6 @@ import me.cheesepro.ce.extra.ConsoleSender;
 import me.cheesepro.ce.extra.Messenger;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.SkullType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -1,7 +1,6 @@
 package me.cheesepro.ce.listener;
 
 import me.cheesepro.ce.extra.Messenger;
-import me.cheesepro.ce.extra.UUIDFetcher;
 import me.cheesepro.ce.file.hubloc;
 import me.cheesepro.ce.file.playerdata;
 import me.cheesepro.ce.mainpack.CEMain;
@@ -13,10 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.server.ServerListPingEvent;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Random;
 
 /**

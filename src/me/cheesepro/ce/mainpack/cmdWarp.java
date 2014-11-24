@@ -43,6 +43,10 @@ public class cmdWarp implements CommandExecutor{
                     warplist.add(warps);
                 }
                 String list = warplist.toString();
+                if(list.equalsIgnoreCase("[]")){
+                    msg.w(p, "5", "No warps has been set");
+                    return true;
+                }
                 msg.m(p, "a", "======================[Warps]======================");
                 msg.m(p, "e", list);
             }

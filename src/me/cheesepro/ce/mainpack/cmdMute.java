@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,13 @@ public class cmdMute implements CommandExecutor, Listener{
     
     @EventHandler
     public void onPlayerMute(AsyncPlayerChatEvent e) {
+        if (mute.contains(e.getPlayer())) {
+            e.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onPlayerCommand(PlayerCommandPreprocessEvent e) {
         if (mute.contains(e.getPlayer())) {
             e.setCancelled(true);
         }

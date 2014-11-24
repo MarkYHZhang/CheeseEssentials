@@ -48,6 +48,12 @@ public class CEMain extends JavaPlugin implements Listener{
             saveDefaultConfig();
         }
 
+        bandata bdata = bandata.getInstance();
+        bdata.setup(this);
+        if (!new File(getDataFolder(), "bandata.yml").exists()) {
+            saveDefaultConfig();
+        }
+
 //        File dir = new File("plugins/CheeseEssentials/locations");
 //        dir.mkdir();
 
@@ -95,6 +101,8 @@ public class CEMain extends JavaPlugin implements Listener{
         cmdList cmdListInstance = new cmdList(this);
         cmdTop cmdTopInstace = new cmdTop(this);
         cmdHead cmdHeadInstance = new cmdHead(this);
+        cmdKick cmdKickInstance = new cmdKick(this);
+        cmdBan cmdBanInstance = new cmdBan(this);
         //End of Command Register
 
         //Start of Listeners Register
@@ -109,6 +117,7 @@ public class CEMain extends JavaPlugin implements Listener{
         new warpSign(this);
         new coloredSign(this);
         new onPlayerRespawn(this);
+        new onPlayerlogin(this);
 
         registerEvents(this, cmdMuteInstance);
         //End of Listeners Register
@@ -173,6 +182,10 @@ public class CEMain extends JavaPlugin implements Listener{
         getCommand("list").setExecutor(cmdListInstance);
         getCommand("top").setExecutor(cmdTopInstace);
         getCommand("head").setExecutor(cmdHeadInstance);
+        getCommand("kick").setExecutor(cmdKickInstance);
+        getCommand("ban").setExecutor(cmdBanInstance);
+        getCommand("unban").setExecutor(cmdBanInstance);
+        getCommand("banlist").setExecutor(cmdBanInstance);
         //End of Command getters
 
         getLogger().info("Plugin Enabled!");

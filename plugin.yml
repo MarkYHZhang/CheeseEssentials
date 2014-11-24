@@ -244,6 +244,22 @@ commands:
       description: Get your or other's head
       permission: CheeseEss.head
       permission-message: §4§lYou don't have Permission!!
+  kick:
+      description: Kick a player
+      permission: CheeseEss.kick
+      permission-message: §4§lYou don't have Permission!!
+  ban:
+      description: ban a player
+      permission: CheeseEss.ban
+      permission-message: §4§lYou don't have Permission!!
+  unban:
+      description: Unban a player
+      permission: CheeseEss.unban
+      permission-message: §4§lYou don't have Permission!!
+  banlist:
+      description: Ban list
+      permission: CheeseEss.banlist
+      permission-message: §4§lYou don't have Permission!!
       
 permissions:
   CheeseEss.gmc:
@@ -365,6 +381,14 @@ permissions:
   CheeseEss.top:
     default: op
   CheeseEss.head:
+    default: op
+  CheeseEss.kick:
+    default: op
+  CheeseEss.ban:
+    default: op
+  CheeseEss.unban:
+    default: op
+  CheeseEss.banlist:
     default: op
 
   CheeseEss.chat.color:
